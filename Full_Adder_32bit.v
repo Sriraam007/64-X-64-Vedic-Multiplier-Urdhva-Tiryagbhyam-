@@ -1,0 +1,42 @@
+module Full_Adder_32bit(A,B,cin,SUM,cout);
+    input [31:0]A,B;
+    input cin;
+    output [31:0]SUM;
+    output cout;
+    wire [31:0]w;
+    
+    Full_Adder2 F1(A[0],B[0],cin,SUM[0],w[0]);
+    Full_Adder2 F2(A[1],B[1],w[0],SUM[1],w[1]);
+    Full_Adder2 F3(A[2],B[2],w[1],SUM[2],w[2]);
+    Full_Adder2 F4(A[3],B[3],w[2],SUM[3],w[3]);
+    Full_Adder2 F5(A[4],B[4],w[3],SUM[4],w[4]);
+    Full_Adder2 F6(A[5],B[5],w[4],SUM[5],w[5]);
+    Full_Adder2 F7(A[6],B[6],w[5],SUM[6],w[6]);
+    Full_Adder2 F8(A[7],B[7],w[6],SUM[7],w[7]);
+    Full_Adder2 F9(A[8],B[8],w[7],SUM[8],w[8]);
+    Full_Adder2 F10(A[9],B[9],w[8],SUM[9],w[9]);
+    Full_Adder2 F11(A[10],B[10],w[9],SUM[10],w[10]);
+    Full_Adder2 F12(A[11],B[11],w[10],SUM[11],w[11]);
+    Full_Adder2 F13(A[12],B[12],w[11],SUM[12],w[12]);
+    Full_Adder2 F14(A[13],B[13],w[12],SUM[13],w[13]);
+    Full_Adder2 F15(A[14],B[14],w[13],SUM[14],w[14]);
+    Full_Adder2 F16(A[15],B[15],w[14],SUM[15],w[15]);
+    
+    Full_Adder2 F17(A[16],B[16],w[15],SUM[16],w[16]);
+    Full_Adder2 F18(A[17],B[17],w[16],SUM[17],w[17]);
+    Full_Adder2 F19(A[18],B[18],w[17],SUM[18],w[18]);
+    Full_Adder2 F20(A[19],B[19],w[18],SUM[19],w[19]);
+    Full_Adder2 F21(A[20],B[20],w[19],SUM[20],w[20]);
+    Full_Adder2 F22(A[21],B[21],w[20],SUM[21],w[21]);
+    Full_Adder2 F23(A[22],B[22],w[21],SUM[22],w[22]);
+    Full_Adder2 F24(A[23],B[23],w[22],SUM[23],w[23]);
+    Full_Adder2 F25(A[24],B[24],w[23],SUM[24],w[24]);
+    Full_Adder2 F26(A[25],B[25],w[24],SUM[25],w[25]);
+    Full_Adder2 F27(A[26],B[26],w[25],SUM[26],w[26]);
+    Full_Adder2 F28(A[27],B[27],w[26],SUM[27],w[27]);
+    Full_Adder2 F29(A[28],B[28],w[27],SUM[28],w[28]);
+    Full_Adder2 F30(A[29],B[29],w[28],SUM[29],w[29]);
+    Full_Adder2 F31(A[30],B[30],w[29],SUM[30],w[30]);
+    Full_Adder2 F32(A[31],B[31],w[30],SUM[31],w[31]);
+    assign cout=w[31];
+endmodule
